@@ -1,0 +1,41 @@
+.ViewTemplate0Page {
+	padding: 8px;
+	border: 1px solid #ccc;
+}
+
+.ViewTemplate0Page .time {
+	background: url("images/date.gif") no-repeat scroll left top transparent;
+	color: #fff;
+	display: inline;
+	float: left;
+	font-size: 11px;
+	height: 64px;
+	line-height: 15px;
+	margin-right: 12px;
+	text-align: center;
+	width: 56px;
+}
+
+.ViewTemplate0Page .time .day {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 8px;
+}
+
+.ViewTemplate0Page .topic .l1 {
+	font-size: 18pt;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.ViewTemplate0Page .topic .l2 {
+	color: #777;
+	line-height: 21px;
+}
+
+.ViewTemplate0Page .c {
+	line-height: 160%;
+	font-size: 9.5pt;
+	margin-top: 25px;
+}

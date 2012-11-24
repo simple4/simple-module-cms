@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql-script>
+	<version>1.0.0</version>
+	<name>script</name>
+	<description></description>
+	<tran-sql>
+    <![CDATA[
+    	create table sf_cms_news_category (
+    		id char(32) not null,
+    		parentid char(32),
+    		name varchar(32) not null,
+    		text varchar(32) not null,
+    		viewtemplate smallint not null,
+    		mark smallint not null,
+    		createdate timestamp not null,
+        userid char(32) not null,
+    		description varchar(256),
+        oorder int not null,
+        primary key(id),
+        unique (name),
+        unique (parentid, text)
+    	);
+    ]]>
+	</tran-sql>
+	<tran-sql>
+    <![CDATA[
+      create table sf_cms_news (
+        id char(32) not null,
+        categoryid char(32) not null,
+        status smallint not null,
+        createdate timestamp not null,
+        userid char(32) not null,
+        topic varchar(128) not null,
+        keywords varchar(128),
+        author varchar(32),
+        source varchar(32),
+        content clob,
+        recommendation int not null,
+        imagemark smallint not null,
+        comments int not null,
+        allowcomments smallint not null,
+        attentions int not null,
+        views int not null,
+        description varchar(256),
+        oorder int not null,
+        primary key(id)
+      );
+    ]]>
+	</tran-sql>
+	<tran-sql>
+    <![CDATA[
+      create table sf_cms_attachment (
+        id char(32) not null,
+        contentid char(32) not null,
+        md5 char(32) not null,
+       	topic varchar(128) not null,
+       	attachtype varchar(16),
+       	attachsize bigint not null,
+       	downloads int not null,
+       	description varchar(256),
+        primary key(id),
+        unique (md5, topic, attachtype)
+      );
+    ]]>
+	</tran-sql>
+	<tran-sql>
+    <![CDATA[
+      create table sf_cms_attachment_lob (
+        md char(32) not null,
+        attachment blob not null,
+        primary key(md)
+      );
+    ]]>
+	</tran-sql>
+	<tran-sql>
+    <![CDATA[
+      create table sf_cms_comment (
+        id char(32) not null,
+        parentid char(32),
+        contentid char(32) not null,
+        createdate timestamp not null,
+        userid char(32) not null,
+       	content clob not null,
+        primary key(id)
+      );
+    ]]>
+	</tran-sql>
+</sql-script>

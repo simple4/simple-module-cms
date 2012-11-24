@@ -1,0 +1,42 @@
+#idNewsList .nc {
+	color: #777777;
+	line-height: 140%;
+	padding: 6px 0;
+}
+
+#idNewsList .nc .photo_icon {
+	margin: 0 15px 4px 0;
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+
+#idNewsList .time {
+	float: right;
+	text-align: center;
+	width: 40px;
+	margin: 2px 2px 2px;
+}
+
+.post_date .time .month {
+	font-size: 11px;
+	padding-top: 3px;
+}
+
+#idNewsList .time .day {
+	font-family: Georgia;
+	font-size: 27px;
+	font-weight: bold;
+	margin-top: -9px;
+	color: #400;
+}
+
+#idNewsList .time .year {
+	font-size: 9px;
+}
+
+#idNewsList .nd {
+	padding: 6px 12px 0 0; 
+	color: #222;
+	text-align: right;
+}
